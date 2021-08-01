@@ -1,0 +1,138 @@
+body{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    background-color: #AAAAAA;
+    display: block;
+}
+h1{
+    margin-bottom: -25px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main-transfer-page{
+    display: flex;
+    justify-content: center;
+}
+
+
+.balance-show{
+    width: 140px;
+    height: 105px;
+    margin: 5px 34px;
+    margin-left: 75px;
+    background-color: #FCE6AF;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.bal{
+    position: absolute;
+    top: 12px;
+    left: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.balno{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 26px;
+}
+.bal-vnd{
+    position: absolute;
+    right: 18px;
+    bottom: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+.trnsfrPage{
+    height: 380px;
+    flex-grow: 1;
+    position: relative;
+}
+.tab{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    margin-left: 9%;
+    margin-right: 80px;
+}
+.tab button{
+    background-color: #F4CD43;
+    border-radius: 15px;
+    text-align: center;
+    width: 210px;
+    height: 45px;
+    margin: 27px;
+    margin-top: 0;
+}
+.selected{
+    background-color: #DAB01E !important;
+    transform: translateY(2px);
+}
+.tabtransfer{
+    display: none;
+    height: 290px;
+    width: 500px;
+    margin: 0 auto;
+    /* margin-left: 31%;
+    margin-right: 100px; */
+    position: relative;
+}
+
+.frm{
+    height: 42px;
+    display: flex;
+    align-items: center;
+}
+label{
+    width: 170px;
+    display: inline-block;
+}
+.blank{
+    width: 300px;
+    height: 20px;
+    margin-bottom: 7px;
+}
+.execute{
+    display: flex;
+    justify-content: center;
+}
+.execute button, .execute input{
+    position: absolute;
+    bottom: 20px;
+    height: 45px;
+    width: 125px;
+    border-radius: 15px;
+    background-color: #042AB2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+}
+
+
+.noti{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    text-align: center;
+    width: 270px;
+    height: 100px;
+    background-color: whitesmoke;
+    margin: 30px;
+    border-radius: 10px;
+}
+.success{
+    padding: 20px;
+    padding-bottom: 9px;
+}
+.cancelbtn{
+    height: 20px;
+    width: 50px;
+    background-color: #D4D1D1;
+    border-radius: 9px;
+}

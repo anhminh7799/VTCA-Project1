@@ -1,0 +1,273 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    <title>Main Page</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- NavBar area -->
+        <div class="row" name="navbar">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbarIndex">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html" id="nav-brandText">DebutPay.</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Trang Chủ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Tin Tức</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dịch Vụ
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" data-bs-toggle="modal" type="button"
+                                            data-bs-target="#quickTransaction">Chuyển Tiền Nhanh</a></li>
+                                    <li><a class="dropdown-item" href="HTML/Service.html">Dịch Vụ Khác</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Carousel for promotion piture -->
+        <div class="row" id="carouselPanel">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img//KM-Vinaphone_27-7-2021.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/jfjfjfjfjfjjf-3.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- Funcion List and Logo -->
+        <div class="row">
+            <div class="functionPanel">
+                <div id="functionTitle">
+                    Tiện Ích Và Dịch Vụ
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="functionList">
+                <div class="row">
+                    <img class="imgInFunction" src="img/icon/withdraw.png" alt="withdraw" data-bs-toggle="modal"
+                        data-bs-target="quickTransaction">
+                    <a href="#" data-bs-toggle="modal" type="button" data-bs-target="#quickTransaction">
+                        <label class="imgLabel">Chuyển Tiền Nhanh</label>
+                    </a>
+                </div>
+                <div class="row">
+                    <img class="imgInFunction" src="img/icon/piggy-bank.png" alt="withdraw">
+                    <a href="#" data-bs-toggle="modal" type="button" data-bs-target="#comingSoon">
+                        <label class="imgLabel">Nuôi Heo Tích Lũy</label>
+                    </a>
+                </div>
+                <div class="row">
+                    <img class="imgInFunction" src="img/icon/statistics.png" alt="withdraw">
+                    <a href="#" data-bs-toggle="modal" type="button" data-bs-target="#comingSoon">
+                        <label class="imgLabel">Tài Chính Ngân Hàng</label>
+                    </a>
+                </div>
+                <div class="row">
+                    <img class="imgInFunction" src="img/icon//wishlist.png" alt="withdraw">
+                    <a href="#" data-bs-toggle="modal" type="button" data-bs-target="#comingSoon">
+                        <label class="imgLabel">Thanh Toán Hóa Đơn</label>
+                    </a>
+                </div>
+                <div class="row">
+                    <img class="imgInFunction" src="img/icon/qr-code.png" alt="withdraw">
+                    <a href="#" data-bs-toggle="modal" type="button" data-bs-target="#comingSoon">
+                        <label class="imgLabel">Quét Mã Thông Minh</label>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Modal area -->
+        <!-- Modal for Quick Transaction Function -->
+        <div class="modal fade" id="quickTransaction" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Chuyển tiền nhanh</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <label class="form-label">Tài khoản đích</label>
+                                        <input type="email" class="form-control" id="txtAccountId"
+                                            placeholder="Số tài khoản...">
+                                    </div>
+                                    <div class="row">
+                                        <label class="form-label">Tên Người Nhận</label>
+                                        <input type="email" class="form-control" id="txtUsername" disabled
+                                            placeholder="Tên Người Nhận...">
+                                    </div>
+                                    <div class="row">
+                                        <label class="form-label">Nhập số tiền</label>
+                                        <input type="number" class="form-control" id="txtAmountTransfer"
+                                            placeholder="Nhập số tiền...">
+                                    </div>
+                                </div>
+                                <div class="col-md-6" id="transactionMethod">
+                                    <div class="row centered">Phương Thức Chuyển</div>
+                                    <div class="row centered">
+                                        <div class="btn-group" role="group"
+                                            aria-label="Basic radio toggle button group">
+                                            <input type="radio" class="btn-check" name="btnradio" id="btnradio1"
+                                                autocomplete="off" checked>
+                                            <label class="btn btn-outline-primary" for="btnradio1">Nội bộ ví</label>
+
+                                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2"
+                                                autocomplete="off">
+                                            <label class="btn btn-outline-primary" for="btnradio2">Chuyển về ngân
+                                                hàng</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label>Phí chuyển tiền: Miễn phí</label>
+                                    </div>
+                                    <div>
+                                        <br>Số tài khoản: <label id="accountID"></label>
+                                        <br>Số dư tài khoản: <label id="accountAmount"></label>
+                                        <br>Số tiền chuyển: <label id="accountWithdrawal"></label>
+                                        <br>Số tiền còn lại: <label id="accountRemain"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" id="transactionClose"
+                            data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="transactionConfirm">Xác nhận</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Coming Soon -->
+        <div class="modal fade" id="comingSoon" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Xin lỗi</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Chức năng này đang được hoàn thiện. Sẽ sớm được đưa vào hỗ trợ sớm...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Promotion -->
+        <div class="row">
+            <div class="functionPanel">
+                <div id="functionTitle">
+                    Thông Tin Khuyến Mãi
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="promoteCard">
+                <div class="card" id="insidepromoteCard">
+                    <img src="img/nathan-dumlao-lvWw_G8tKsk-unsplash.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Ưu đãi tháng 6</h5>
+                        <p class="card-text">Trọn bộ Combo khi mời người mới sử dụng dịch vụ lên tới 600K</p>
+                        <a href="#" class="btn btn-primary">Chi tiết</a>
+                    </div>
+                </div>
+                <div class="card" id="insidepromoteCard">
+                    <img src="img/nathan-dumlao-lvWw_G8tKsk-unsplash.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Ưu đãi tháng 7</h5>
+                        <p class="card-text">Trọn bộ Combo khi mời người mới sử dụng dịch vụ lên tới 600K</p>
+                        <a href="#" class="btn btn-primary">Chi tiết</a>
+                    </div>
+                </div>
+                <div class="card" id="insidepromoteCard">
+                    <img src="img/nathan-dumlao-lvWw_G8tKsk-unsplash.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Ưu đãi tháng 8</h5>
+                        <p class="card-text">Trọn bộ Combo khi mời người mới sử dụng dịch vụ lên tới 600K</p>
+                        <a href="#" class="btn btn-primary">Chi tiết</a>
+                    </div>
+                </div>
+                <div class="card" id="insidepromoteCard">
+                    <img src="img/nathan-dumlao-lvWw_G8tKsk-unsplash.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Ưu đãi tháng 9</h5>
+                        <p class="card-text">Trọn bộ Combo khi mời người mới sử dụng dịch vụ lên tới 600K</p>
+                        <a href="#" class="btn btn-primary">Chi tiết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="footerPanel">
+            <div class="col-md-2" id="footerLeft">
+                <div id="logoDebutPay">
+                    <div>DebutPay.</div>
+                </div>
+            </div>
+            <div class="col-md-10" id="footerRight">
+                <h4>DebutPay Services</h4>
+                <P>Address: VTC Academy, Lê Đại Hành Str, District 11, HCMC
+                    <br>Tel : 0259 3456789
+                    <br>Email : anhminh7799@gmail.com, duoc1706@gmail.com
+                    <br>Designed by Minh Nguyen & Duoc Nguyen.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+<script src="js/index.js"></script>

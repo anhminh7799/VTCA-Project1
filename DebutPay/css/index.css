@@ -1,0 +1,121 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0%;
+}
+
+/* This place for navbar */
+#navbarIndex {
+    background-color: #aaaaaa;
+}
+
+#nav-brandText {
+    color: #ecbf4c;
+    font-weight: bold;
+}
+
+#navbarNavDropdown {
+    justify-content: center;
+}
+
+.nav-item {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+/* Carousel Panel */
+#carouselPanel {
+    background-color: #aaaaaa;
+}
+
+/* This place for function list */
+#functionTitle {
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-weight: bold;
+    font-size: 20px;
+    color: #ecbf4c;
+}
+
+.functionPanel {
+    background-color: #aaaaaa;
+    padding: 20px;
+}
+
+.functionList {
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+.functionList .row {
+    width: 128px;
+    height: 128px;
+    justify-content: center;
+    margin-left: 3rem;
+    margin-right: 3srem;
+}
+.imgInFunction {
+    justify-content: center;
+}
+
+.imgLabel {
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* This area for promotion section */
+.promoteCard {
+    display: flex;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#insidepromoteCard {
+    margin: 15px;
+}
+
+.card-img-top {
+    height: 18rem;
+}
+
+/* This place for footer */
+#footerPanel {
+    display: flex;
+    background-color: #aaaaaa;
+}
+
+#footerLeft {
+    display: flex;
+    justify-content: center;
+    background-color: #ededed;
+}
+
+#footerRight {
+    padding: 1rem;
+}
+
+#logoDebutPay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ecbf4c;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* Modal */
+/* Transaction Modal */
+.row.centered {
+    justify-content: center;
+}

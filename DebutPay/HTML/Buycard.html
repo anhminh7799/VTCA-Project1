@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Buycard</title>
+    <link rel="stylesheet" href="./CSS/buycard.css">
+    <link rel="stylesheet" href="./CSS/header_footer.css">
+    <script type="text/javascript" src="BalanceNumber.js"></script>
+</head>
+
+<body>
+    <div class="buycard-page">
+        <div class="firstline">
+            <div class="logo">DebutPay</div>
+            <div class="menu-list">
+                <ul class="menu">
+                    <li><a href="../index.html">Trang chủ</a></li>
+                    <li><a href="#">Tin Tức</a></li>
+                    <li><a href="./service.html">Dịch vụ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="directional">
+            <ul class="dir-ctn-ul">
+                <li><a href="./Buycard.html">Mua thẻ ĐT</a></li>
+                <li><a href="./Topup.html">Nạp điện thoại</a></li>
+                <li><a href="#">Nạp data</a></li>
+                <li><a href="#">Mua thẻ data</a></li>
+                <li><a href="#">Thanh toán hoá đơn</a></li>
+                <li><a href="#">Mua thẻ game</a></li>
+                <li><a href="#">Vay tiêu dùng</a></li>
+                <li><a href="./Saving.html">Gửi tiết kiệm</a></li>
+            </ul>
+        </div>
+        <div class="buycard-surround">
+            <div class="sub-cont">
+                <h1>Mua thẻ điện thoại</h1>
+                <div class="back-button"><a href="./service.html"><button class="btn-back">Trở lại</button></a></div>
+            </div>
+            <div class="buycard-content">
+                <div class="op" id="opName">
+                    <ul class="opname">
+                        <li><button class="press">Mobifone</button></li>
+                        <li><button class="press">Vinaphone</button></li>
+                        <li><button class="press">Viettel</button></li>
+                        <li><button class="press">Vietnamobile</button></li>
+                        <li><button class="press">Gmobile</button></li>
+                    </ul>
+                </div>
+                <div class="denomination" id="Demo">
+                    <ul class="dem-no">
+                        <li><button class="press2">10.000</button></li>
+                        <li><button class="press2">20.000</button></li>
+                        <li><button class="press2">30.000</button></li>
+                        <li><button class="press2">50.000</button></li>
+                        <li><button class="press2">100.000</button></li>
+                        <li><button class="press2">200.000</button></li>
+                        <li><button class="press2">500.000</button></li>
+                    </ul>
+                </div>
+                <div class="pay-btn"><button onclick="document.getElementById('payment').style.display='block'">Thanh
+                        toán</button></div>
+            </div>
+        </div>
+
+        <!-- Viết popup thanh toán -->
+
+        <div class="payment" id="payment">
+            <div class="closecontainer">
+                <span onclick="document.getElementById('payment').style.display='none'" class="closebtn"
+                    title="Close Modal">&times;</span>
+            </div>
+            <h4>Thanh toán</h4>
+            <div class="mainpart">
+                <div class="showbanklist">
+                    <div class="word">Loại thẻ</div>
+                    <!-- Các hình thức thanh toán -->
+                    <div class="paytype">
+                        <ul class="ulpaytype">
+                            <li><button class="btntype choosed" onClick="openpym(event,'balan')">Số dư DebutPay</button>
+                            </li>
+                            <li><button class="btntype" onClick="openpym(event,'bnklnk')">ATM</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Nội dung các hình thức -->
+                <div class="typepagecontainer">
+                    <div class="typepage balan" id="balan" style="display: block;">
+                        <div class="sodu">Số dư :</div>
+                        <div id="balno" class="balno"></div>
+                    </div>
+
+                    <div class="typepage bnklnk" id="bnklnk" style="display: none;">
+                        <div class="bankname">
+                            <ul>
+                                <li class="bnk1 atm">MSB</li>
+                                <li class="bnk1 cc">Visa HSBC</li>
+                                <li class="bnk1 cc">MasterCard Shinhan</li>
+                                <a href="./Banklink.html">
+                                    <li class="bnk1 others">Kết nối thẻ khác</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="confirm" onclick="cnfrm()"><button>Xác nhận</button></div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="ftlogo">DebutPay</div>
+            <div class="ftcontent">
+                <div class="ftname">DebutPay Services</div>
+                <ul class="ftdetail">
+                    <li><span>Địa chỉ: VTC Academy, đường Lê Đại Hành, quận 11, TP. HCM</span></li>
+                    <li><span>SĐT: 0258 345678</span></li>
+                    <li><span>Email: anhminh7799@gmail.com<br />&emsp;&emsp;&emsp;duoc1706@gmail.com</span></li>
+                </ul>
+                <div class="ftsign">Designed by: Minh Nguyen - Duoc Nguyen</div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // // hiện số dư
+        document.getElementById("balno").innerHTML = 0;
+
+        // Function để chọn tên nhà mạng
+        var btncontain1 = document.getElementById("opName");
+        var btns1 = btncontain1.getElementsByClassName("press");
+        for (var i = 0; i < btns1.length; i++) {
+            btns1[i].addEventListener("click", function () {
+                var withActive = document.getElementsByClassName("press active");
+                if (withActive.length > 0) {
+                    withActive[0].className = withActive[0].className.replace("press active", "press");
+                }
+                this.className += " active";
+            })
+        }
+
+        // Function để chọn mệnh giá
+        var btncontain = document.getElementById("Demo");
+        var btns = btncontain.getElementsByClassName("press2");
+        for (var j = 0; j < btns.length; j++) {
+            btns[j].addEventListener("click", function () {
+                var withActive = document.getElementsByClassName("press2 active");
+                if (withActive.length > 0) {
+                    withActive[0].className = withActive[0].className.replace("press2 active", "press2");
+                }
+                this.className += " active";
+            })
+        }
+
+        // Function để chọn tab
+        function openpym(evnt, idname) {
+            var i, tabtrans, tabmain;
+            tabtrans = document.getElementsByClassName("typepage");
+            for (i = 0; i < tabtrans.length; i++) {
+                tabtrans[i].style.display = "none";
+            }
+
+            tabmain = document.getElementsByClassName("btntype");
+            for (i = 0; i < tabmain.length; i++) {
+                tabmain[i].className = tabmain[i].className.replace(" choosed", "");
+            }
+
+            document.getElementById(idname).style.display = "block";
+            evnt.currentTarget.className += " choosed";
+        }
+
+        // Function hiện confirm giao dịch
+        function cnfrm() {
+            var cnfrm = confirm("Bạn có đồng ý giao dịch không?");
+            if (cnfrm == true) {
+                alert("Giao dịch thành công\nXin cảm ơn.");
+            }
+        }
+    </script>
+</body>
+
+</html>

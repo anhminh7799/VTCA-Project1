@@ -1,0 +1,33 @@
+h2{
+    font-weight: bold;
+    text-align: center;
+    margin: -5px 10px 0px 10px;
+    color: yellow;
+    display: block;
+}
+.ads{
+    display: flex;
+    background-color: white;
+    height: 250px;
+    margin: 30px;
+    padding: 45px;
+}
+.ads li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33.333%;
+    padding: 0 12px;
+}
+.ads1{
+    max-width: 388px;
+    background-color: #C4C4C4;
+    padding-bottom: 25px;
+}
+.ads1 img{
+    display: block;
+    width: 100%;
+}
+.ads .desc{
+    margin-top: 10px;
+}

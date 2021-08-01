@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Deposit</title>
+    <link rel="stylesheet" href="./CSS/deposit.css">
+    <link rel="stylesheet" href="./CSS/header_footer.css">
+    <script type="text/javascript" src="BalanceNumber.js"></script>
+</head>
+
+<body>
+    <div class="deposit-page">
+        <div class="firstline">
+            <div class="logo">DebutPay</div>
+            <div class="menu-list">
+                <ul class="menu">
+                    <li><a href="../index.html">Trang chủ</a></li>
+                    <li><a href="#">Tin Tức</a></li>
+                    <li><a href="./service.html">Dịch vụ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="directional">
+            <ul class="dir-ctn-ul">
+                <li><a href="./Buycard.html">Mua thẻ ĐT</a></li>
+                <li><a href="./Topup.html">Nạp điện thoại</a></li>
+                <li><a href="#">Nạp data</a></li>
+                <li><a href="#">Mua thẻ data</a></li>
+                <li><a href="#">Thanh toán hoá đơn</a></li>
+                <li><a href="#">Mua thẻ game</a></li>
+                <li><a href="#">Vay tiêu dùng</a></li>
+                <li><a href="./Saving.html">Gửi tiết kiệm</a></li>
+            </ul>
+        </div>
+        <h1>Nạp tiền</h1>
+        <div class="sub-btn">
+            <div class="back-button"><a href="./service.html"><button class="btn-back">Trở lại</button></a></div>
+            <div class="balance-show">
+                <div class="bal">Số dư</div>
+                <div id="balno" class="balno">
+                    <script>document.write(balancenumber)</script>
+                </div>
+                <div class="bal-vnd">VND</div>
+            </div>
+        </div>
+        <div class="main-depo">
+            <div class="core">
+                <div class="inputMoney">
+                    <form action="" name="depos" onsubmit="return noti()" method="POST">
+                        <div class="depospace">
+                            <label>Số tiền</label>
+                            <input type="number" name="amount" required />
+                        </div>
+                        <div class="pay-btn">
+                            <!-- <button onclick="document.getElementById('noti').style.display='block'">Nạp tiền</button> -->
+                            <input type="submit" value="Nạp tiền">
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <!-- <div class="noti" id="noti">
+                    <div class="success">Giao dịch của bạn đã thành công<br/>Xin cảm ơn</div>
+                    <button type="button" onclick="document.getElementById('noti').style.display='none'" class="cancelbtn">OK</button>
+                </div> -->
+        </div>
+        <footer class="footer">
+            <div class="ftlogo">DebutPay</div>
+            <div class="ftcontent">
+                <div class="ftname">DebutPay Services</div>
+                <ul class="ftdetail">
+                    <li><span>Địa chỉ: VTC Academy, đường Lê Đại Hành, quận 11, TP. HCM</span></li>
+                    <li><span>SĐT: 0258 345678</span></li>
+                    <li><span>Email: anhminh7799@gmail.com<br />&emsp;&emsp;&emsp;duoc1706@gmail.com</span></li>
+                </ul>
+                <div class="ftsign">Designed by: Minh Nguyen - Duoc Nguyen</div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function noti() {
+            var amount = Number(document.forms["depos"]["amount"].value);
+            var cnfrm = confirm("Bạn có đồng ý giao dịch không?");
+            if (cnfrm === true) {
+                addbalance(amount);
+                alert("Giao dịch thành công\nSố dư ví hiện tại của bạn là " +
+                    balancenumber + "\nXin cảm ơn.");
+            }
+        }
+    </script>
+</body>
+
+</html>

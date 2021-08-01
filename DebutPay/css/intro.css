@@ -1,0 +1,206 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0%;
+}
+
+/* This place for navbar */
+#navbarIndex {
+    background-color: #aaaaaa;
+}
+
+#nav-brandText {
+    color: #ecbf4c;
+    font-weight: bold;
+}
+
+#navbarNavDropdown {
+    justify-content: center;
+}
+
+.nav-item {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.brandLogo {
+    height: 2rem;
+    width: 2rem;
+    margin-left: 1rem;
+}
+
+/* First Content */
+
+#introContent {
+    background-color: #aaaaaa;
+}
+
+#firstContent {
+    margin-top: 5rem;
+}
+
+.imgContainer {
+    position: relative;
+}
+
+#cardImg {
+    position: absolute;
+    left: 10%;
+    height: 100%;
+    width: 80%;
+}
+
+#firstContent .yellowText {
+    color: #ecbf4c;
+    font-weight: bold;
+}
+
+#firstContent h2,
+p {
+    color: #f1f1f1;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+#firstContent h1 {
+    display: flex;
+    font-size: 300%;
+}
+
+#firstContent h2 {
+    text-align: right;
+}
+
+#firstContent p {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 130%;
+}
+/* Email register */
+
+.emailForm {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+    text-align: center;
+}
+
+#emailInput {
+    display: flex;
+    justify-content: center;
+}
+
+/* Label Content */
+#functionLabel {
+    justify-content: center;
+    color: #ecbf4c;
+    font-weight: bold;
+    font-size: 200%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Section 2 */
+
+#featureContaner {
+    background-color: #aaaaaa;
+    position: relative;
+}
+
+#secondContent {
+    position: relative;
+}
+.absoluteLogo {
+    position: absolute;
+    width: 12rem;
+    top: 50%;
+    left: 43%;
+    background-color: #f1f1f1;
+    color: #ecbf4c;
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+}
+
+#imgContainer {
+    padding: 0;
+}
+
+#imgContent {
+    width: 100%;
+    padding: 0;
+}
+
+.paragraphSectionFirst {
+    position: absolute;
+    top: 10%;
+}
+
+.paragraphSectionSecond {
+    position: absolute;
+    top: 50%;
+}
+
+.paragraphSectionThird {
+    position: absolute;
+    top: 80%;
+}
+
+.paragraphTitle {
+    font-weight: bold;
+}
+
+.paraghaphContent {
+    color: #f1f1f1;
+}
+
+/* Contact Section */
+.contactContaner {
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.row.contactForm {
+    width: 70%;
+    justify-content: center;
+    background-color: #aaaaaa;
+    padding: 1rem;
+}
+
+.submitComment {
+    justify-content: center;
+}
+
+#submitComment {
+    width: 40%;
+}
+
+/* This place for footer */
+#footerPanel {
+    display: flex;
+    background-color: #aaaaaa;
+}
+
+#footerLeft {
+    display: flex;
+    justify-content: center;
+    background-color: #ededed;
+}
+
+#footerRight {
+    padding: 1rem;
+}
+
+#logoDebutPay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ecbf4c;
+    font-weight: bold;
+    font-size: 30px;
+}

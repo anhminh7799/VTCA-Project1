@@ -1,0 +1,76 @@
+body{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    display: block;
+    background-image: url(../IMG/balance.jpg);
+    background-repeat: repeat-y;
+}
+.balance-page{
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+}
+.bal-show{
+    background-color: #DADFA3;
+    height: 115px;
+    width: 205px;
+    margin: 10px auto 30px auto;
+    border-radius: 30px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.circle{
+    height: 40px;
+    width: 100px;
+    border-radius: 50%;
+    border: solid 1px;
+    border-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+    background-color: #FFFCFC;
+}
+.circle h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20x;
+}
+.balno{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 38px;
+    text-align: center;
+}
+.bal-vnd{
+    position: absolute;
+    font-weight: bold;
+    font-size: 11px;
+    text-align: right;
+    right: 8px;
+    top: 83px;
+}
+
+.other-btn{
+    display: flex;
+    justify-content: center;
+}
+.btn-name{
+    margin: 20px;
+    display: flex;
+}
+.btn-name button{
+    height: 55px;
+    width: 120px;
+    margin: 0px 57px 30px 57px;
+    background-color: #E3F2EF;
+    border-radius: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}

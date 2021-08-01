@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Saving</title>
+    <link rel="stylesheet" href="./CSS/saving.css">
+    <link rel="stylesheet" href="./CSS/header_footer.css">
+    <link rel="stylesheet" href="./CSS/ads.css">
+    <script type="text/javascript" src="BalanceNumber.js"></script>
+</head>
+
+<body>
+    <div class="saving-page">
+        <div class="firstline">
+            <div class="logo">DebutPay</div>
+            <div class="menu-list">
+                <ul class="menu">
+                    <li><a href="../index.html">Trang chủ</a></li>
+                    <li><a href="#">Tin Tức</a></li>
+                    <li><a href="./service.html">Dịch vụ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="directional">
+            <ul class="dir-ctn-ul">
+                <li><a href="./Buycard.html">Mua thẻ ĐT</a></li>
+                <li><a href="./Topup.html">Nạp điện thoại</a></li>
+                <li><a href="#">Nạp data</a></li>
+                <li><a href="#">Mua thẻ data</a></li>
+                <li><a href="#">Thanh toán hoá đơn</a></li>
+                <li><a href="#">Mua thẻ game</a></li>
+                <li><a href="#">Vay tiêu dùng</a></li>
+                <li><a href="./Saving.html">Gửi tiết kiệm</a></li>
+            </ul>
+        </div>
+        <h1>Gửi tiết kiệm</h1>
+        <div class="container">
+            <div class="generinfo">
+                <div class="sub-cont">
+                    <div class="back-button"><a href="./service.html"><button class="btn-back">Trở lại</button></a>
+                    </div>
+                    <div class="balance-show">
+                        <div class="bal">Số dư</div>
+                        <div id="balno" class="balno">
+                            <script>document.write(balancenumber)</script>
+                        </div>
+                        <div class="bal-vnd">VND</div>
+                    </div>
+                </div>
+                <!-- <div class="saving-acc">Các khoản tiết kiệm đang có</div> -->
+                <div class="sum-surround">
+                    <div class="sum-saving">Tổng số tiền tiết kiệm</div>
+                    <div class="sumdigit">
+                        <script>document.write(savingamount)</script>
+                    </div>
+                    <div class="sum-vnd">VND</div>
+                </div>
+            </div>
+            <div class="choosebank">
+                <div class="bankinfo">
+                    <div class="ch-bank">
+                        <h3>Chọn ngân hàng</h3>
+                        <ul class="bank-name" id="bank-name">
+                            <li id="Vietcombank" class="bn" onclick="choosebank('Vietcombank')">Vietcombank</li>
+                            <li id="Vietinbank" class="bn" onclick="choosebank('Vietinbank')">Vietinbank</li>
+                            <li id="SCB" class="bn" onclick="choosebank('SCB')">SCB</li>
+                            <li id="OCB" class="bn" onclick="choosebank('OCB')">OCB</li>
+                        </ul>
+                    </div>
+                    <div class="ch-term" id="ch-term">
+                        <h3>Chọn kỳ hạn</h3>
+                        <ul class="term">
+                            <li id="1m" class="tm" onclick="chooseterm('1m')">1 tháng</li>
+                            <li id="3m" class="tm" onclick="chooseterm('3m')">3 tháng</li>
+                            <li id="6m" class="tm" onclick="chooseterm('6m')">6 tháng</li>
+                            <li id="12m" class="tm" onclick="chooseterm('12m')">12 tháng</li>
+                        </ul>
+                    </div>
+                    <div class="show-interest">
+                        <h3 onmouseover="rate()">Xem lãi suất</h3>
+                        <!-- <button >Xem lãi suất</button> -->
+                        <div class="intere" id="intere"></div>
+                    </div>
+                </div>
+                <div class="saving-input">
+                    <form action="" name="formsaving" onsubmit="return submitsaving()" method="POST">
+                        <div class="input-amount blnk">
+                            <label class="sotiengui">Số tiền gửi</label>
+                            <input type="number" name="amount" class="blank-amount" placeholder="Tối thiểu 100.000 VND">
+                        </div>
+                        <div class="input-name blnk">
+                            <label class="tengoinho">Đặt tên gợi nhớ</label>
+                            <input type="text" name="nickname" class="blank-amount">
+                        </div>
+                        <div class="saving-btn"><input type="submit" value="Gửi">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <h2>Tin tức/Khuyến mãi</h2>
+        <ul class="ads">
+            <li>
+                <div class="ads1">
+                    <div class="img-contain">
+                        <img src="./img/ads.png" alt="quangcao1" class="imgads">
+                    </div>
+                    <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ads1">
+                    <div class="img-contain">
+                        <img src="./img/ads.png" alt="quangcao1" class="imgads">
+                    </div>
+                    <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ads1">
+                    <div class="img-contain">
+                        <img src="./img/ads.png" alt="quangcao1" class="imgads">
+                    </div>
+                    <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <footer class="footer">
+            <div class="ftlogo">DebutPay</div>
+            <div class="ftcontent">
+                <div class="ftname">DebutPay Services</div>
+                <ul class="ftdetail">
+                    <li><span>Địa chỉ: VTC Academy, đường Lê Đại Hành, quận 11, TP. HCM</span></li>
+                    <li><span>SĐT: 0258 345678</span></li>
+                    <li><span>Email: anhminh7799@gmail.com<br />&emsp;&emsp;&emsp;duoc1706@gmail.com</span></li>
+                </ul>
+                <div class="ftsign">Designed by: Minh Nguyen - Duoc Nguyen</div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Function để chọn ngân hàng
+        var btncontain1 = document.getElementById("bank-name");
+        var btns1 = btncontain1.getElementsByClassName("bn");
+        for (var i = 0; i < btns1.length; i++) {
+            btns1[i].addEventListener("click", function () {
+                var withActive = document.getElementsByClassName("bn active");
+                if (withActive.length > 0) {
+                    withActive[0].className = withActive[0].className.replace("bn active", "press");
+                }
+                this.className += " active";
+            })
+        }
+
+        // Function để chọn kỳ hạn
+        var btncontain = document.getElementById("ch-term");
+        var btns = btncontain.getElementsByClassName("tm");
+        for (var j = 0; j < btns.length; j++) {
+            btns[j].addEventListener("click", function () {
+                var withActive = document.getElementsByClassName("tm active");
+                if (withActive.length > 0) {
+                    withActive[0].className = withActive[0].className.replace("tm active", "press2");
+                }
+                this.className += " active";
+            })
+        }
+
+
+
+        var bank = null, term = null, rateterm = 0;
+
+        function choosebank(bnkname) {
+            bank = bnkname;
+        }
+
+        function chooseterm(trm) {
+            term = trm;
+        }
+
+        function rate() {
+            if (bank === 'Vietcombank') {
+                switch (term) {
+                    case '1m': { rateterm = 3.1; break; }
+                    case '3m': { rateterm = 3.4; break; }
+                    case '6m': { rateterm = 4; break; }
+                    case '12m': { rateterm = 5.5; break; }
+                }
+            }
+            if (bank === 'Vietinbank') {
+                switch (term) {
+                    case '1m': { rateterm = 3.1; break; }
+                    case '3m': { rateterm = 3.4; break; }
+                    case '6m': { rateterm = 4; break; }
+                    case '12m': { rateterm = 5.6; break; }
+                }
+            }
+            if (bank === 'SCB') {
+                switch (term) {
+                    case '1m': { rateterm = 3.95; break; }
+                    case '3m': { rateterm = 3.95; break; }
+                    case '6m': { rateterm = 5.7; break; }
+                    case '12m': { rateterm = 6.8; break; }
+                }
+            }
+            if (bank === 'OCB') {
+                switch (term) {
+                    case '1m': { rateterm = 3.75; break; }
+                    case '3m': { rateterm = 3.9; break; }
+                    case '6m': { rateterm = 5.4; break; }
+                    case '12m': { rateterm = 6; break; }
+                }
+            }
+            document.getElementById("intere").innerHTML = rateterm + "%";
+        }
+
+        function submitsaving() {
+            var mount = Number(document.forms["formsaving"]["amount"].value);
+            if (bank === null || term === null) {
+                alert("Chưa chọn ngân hàng hoặc kỳ hạn");
+                return false;
+            } else
+                if (isNaN(mount)) {
+                    alert("Số tiền không hợp lệ");
+                    return false;
+                } else
+                    if (mount > balancenumber) {
+                        alert("Số tiền lớn hơn số dư hiện có");
+                        return false;
+                    } else {
+                        balancenumber -= mount;
+                        savingamount2 = Number(savingamount);
+                        savingamount2 += mount;
+                        alert("Bạn đã gửi thành công số tiền tiết kiệm " + mount +
+                            "tại ngân hàng " + bank + " với kỳ hạn " + term + ", lãi suất " + rateterm +
+                            "\rSố dư còn lại trong ví là " + balancenumber +
+                            "\rTổng tiền tiết kiệm đang có là " + savingamount);
+                        return true;
+                    }
+
+        }
+    </script>
+</body>
+
+</html>

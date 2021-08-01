@@ -1,0 +1,54 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+/*  */
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+/* Background Image CSS */
+#background-image {
+    height: 100%;
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-position: center;
+    /* Fixed position for form control */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form Control CSS */
+#rowLoginForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginFormCover {
+    background-color: F4EDED;
+    border-radius: 10px;
+    padding: 12px 50px;
+}
+
+/* Logo */
+#logoDebutPay {
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    color: ECBF4C;
+}
+
+/* Login button */
+#btnLoginPosition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

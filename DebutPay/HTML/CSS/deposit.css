@@ -1,0 +1,116 @@
+h1{
+    margin-bottom: -25px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sub-btn{
+    display: flex;
+    position: relative;
+}
+
+.balance-show{
+    position: absolute;
+    right: 35px;
+    width: 230px;
+    height: 55px;
+    background-color: #EDDEA7;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bal{
+    position: absolute;
+    top: 12px;
+    left: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+}
+.balno{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+}
+.bal-vnd{
+    position: absolute;
+    right: 18px;
+    bottom: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+.main-depo{
+    height: 200px;
+    background-color: #FDE7AF;
+    margin: 15px 20px;
+    display: flex;
+    border-radius: 196px;
+    justify-content: center;
+}
+.core{
+    margin: auto;
+}
+.inputMoney{
+    height: 120px;
+    width: 485px;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.depospace{
+    display: flex;
+    height: 30px;
+    width: 485px;
+}
+.depospace label{
+    width: 30%;
+    text-align: center;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+.depospace input{
+    flex-grow: 1;
+    height: 25px;
+}
+.pay-btn{
+    /* display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    height: 50px;
+    width: 120px;
+    margin: auto;
+    margin-top: 33px;
+}
+.pay-btn button, .pay-btn input{
+    height: 50px;
+    width: 120px;
+    background-color: #0739EA;
+    border-radius: 16px;
+    color: #E4E0D2;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.noti{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 270px;
+    height: 100px;
+    background-color: whitesmoke;
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+}
+.success{
+    padding: 20px;
+    padding-bottom: 9px;
+}
+.cancelbtn{
+    height: 20px;
+    width: 50px;
+    background-color: #D4D1D1;
+    border-radius: 9px;
+}

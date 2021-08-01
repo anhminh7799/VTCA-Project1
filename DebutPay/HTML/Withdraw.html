@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Balance</title>
+    <link rel="stylesheet" href="./CSS/withdraw.css">
+    <link rel="stylesheet" href="./CSS/header_footer.css">
+    <script type="text/javascript" src="BalanceNumber.js"></script>
+</head>
+
+<body>
+    <div class="withdraw-page">
+        <div class="firstline">
+            <div class="logo">DebutPay</div>
+            <div class="menu-list">
+                <ul class="menu">
+                    <li><a href="../index.html">Trang chủ</a></li>
+                    <li><a href="#">Tin Tức</a></li>
+                    <li><a href="./service.html">Dịch vụ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="directional">
+            <ul class="dir-ctn-ul">
+                <li><a href="./Buycard.html">Mua thẻ ĐT</a></li>
+                <li><a href="./Topup.html">Nạp điện thoại</a></li>
+                <li><a href="#">Nạp data</a></li>
+                <li><a href="#">Mua thẻ data</a></li>
+                <li><a href="#">Thanh toán hoá đơn</a></li>
+                <li><a href="#">Mua thẻ game</a></li>
+                <li><a href="#">Vay tiêu dùng</a></li>
+                <li><a href="./Saving.html">Gửi tiết kiệm</a></li>
+            </ul>
+        </div>
+        <div class="wthdrwPage">
+            <h1>Rút tiền</h1>
+            <div class="upper">
+                <div class="sub-btn">
+                    <div class="back-button"><a href="./service.html"><button>Trở lại</button></a></div>
+                    <div class="btntransfer"><a href="./Transfer.html"><button>Chuyển tiền đến ngân hàng</button></a>
+                    </div>
+                </div>
+                <p class="shortDes">Tính năng này hỗ trợ rút tiền về các ngân hàng liên kết; nếu cần rút về ngân hàng
+                    không liên kết, vui lòng dùng tính năng chuyển tiền đến ngân hàng</p>
+            </div>
+            <div class="bal-show">
+                <div class="circle">
+                    <h3>Số dư</h3>
+                </div>
+                <div id="balno" class="balno">
+                    <script>document.write(balancenumber)</script>
+                </div>
+                <div class="bal-vnd">VND</div>
+            </div>
+            <div class="withdrawcont">
+                <div class="wamound frm">
+                    <label for="sotien" class="label">Số tiền</label>
+                    <input type="number" />
+                </div>
+                <div class="wbank frm">
+                    <label for="nganhangrut" class="label">Ngân hàng rút</label>
+                    <select name="banklist">
+                        <option value="msb">MSB</option>
+                    </select>
+                </div>
+                <div class="wcost frm">
+                    <label for="phirut" class="label">Phí rút tiền</label>
+                    <div class="showwcost label"></div>
+                </div>
+            </div>
+            <div class="pay-btn"><button>Rút tiền</button></div>
+        </div>
+        <footer class="footer">
+            <div class="ftlogo">DebutPay</div>
+            <div class="ftcontent">
+                <div class="ftname">DebutPay Services</div>
+                <ul class="ftdetail">
+                    <li><span>Địa chỉ: VTC Academy, đường Lê Đại Hành, quận 11, TP. HCM</span></li>
+                    <li><span>SĐT: 0258 345678</span></li>
+                    <li><span>Email: anhminh7799@gmail.com<br />&emsp;&emsp;&emsp;duoc1706@gmail.com</span></li>
+                </ul>
+                <div class="ftsign">Designed by: Minh Nguyen - Duoc Nguyen</div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

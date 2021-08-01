@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Transfer</title>
+    <link rel="stylesheet" href="./CSS/transfer.css">
+    <link rel="stylesheet" href="./CSS/header_footer.css">
+    <script type="text/javascript" src="BalanceNumber.js"></script>
+</head>
+
+<body>
+    <div class="transfer-page">
+        <div class="firstline">
+            <div class="logo">DebutPay</div>
+            <div class="menu-list">
+                <ul class="menu">
+                    <li><a href="../index.html">Trang chủ</a></li>
+                    <li><a href="#">Tin Tức</a></li>
+                    <li><a href="./service.html">Dịch vụ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="directional">
+            <ul class="dir-ctn-ul">
+                <li><a href="./Buycard.html">Mua thẻ ĐT</a></li>
+                <li><a href="./Topup.html">Nạp điện thoại</a></li>
+                <li><a href="#">Nạp data</a></li>
+                <li><a href="#">Mua thẻ data</a></li>
+                <li><a href="#">Thanh toán hoá đơn</a></li>
+                <li><a href="#">Mua thẻ game</a></li>
+                <li><a href="#">Vay tiêu dùng</a></li>
+                <li><a href="./Saving.html">Gửi tiết kiệm</a></li>
+            </ul>
+        </div>
+        <div class="trsf-surround">
+            <h1>Chuyển tiền</h1>
+            <div class="sub-btn">
+                <div class="back-button"><a href="./service.html"><button class="btn-back">Trở lại</button></a></div>
+            </div>
+            <div class="main-transfer-page">
+                <div class="balance-show">
+                    <div class="bal">Số dư</div>
+                    <div id="balno" class="balno">
+                        <script>document.write(balancenumber)</script>
+                    </div>
+                    <div class="bal-vnd">VND</div>
+                </div>
+                <div class="trnsfrPage">
+
+                    <!-- Hiển thị tên các tab -->
+                    <div class="tab">
+                        <button class="maintab selected" onClick="opentab(event,'internal')">Chuyển khoản nội
+                            bộ</button>
+                        <button class="maintab" onClick="opentab(event,'ibft')">Chuyển khoản liên ngân hàng</button>
+                    </div>
+
+                    <!-- Nội dung trong các tab -->
+                    <div id="internal" class="tabtransfer" style="display: block;">
+                        <form action="" name="forminternal" onsubmit="return checkform1()" method="POST">
+                            <div class="frm">
+                                <label for="accnolb" class="label">Số tài khoản DebutPay</label>
+                                <input type="number" class="blank" name="accno" required>
+                            </div>
+                            <div class="frm">
+                                <label for="accnamelb" class="label">Tên chủ tài khoản</label>
+                                <input type="text" class="blank" name="accname" required>
+                            </div>
+                            <div class="frm">
+                                <label for="amountlb" class="label">Số tiền</label>
+                                <input type="number" class="blank" name="amount" required>
+                            </div>
+                            <div class="frm">
+                                <label for="notelb" class="label">Nội dung ghi chú</label>
+                                <input type="text" class="blank" name="note">
+                            </div>
+                            <div class="execute"><input type="submit" value="Xác nhận"></div>
+                        </form>
+                        <!-- <div class="execute"><button onclick="document.getElementById('popup').style.display='block'">Xác nhận</button></div> -->
+                    </div>
+                    <div id="ibft" class="tabtransfer">
+                        <form action="" name="formibft" onsubmit="return checkform2()" method="POST">
+                            <div class="frm slct">
+                                <label for="bankname">Ngân hàng</label>
+                                <select class="blank">
+                                    <option value="vcb">Vietcombank</option>
+                                    <option value="ctg">Vietinbank</option>
+                                    <option value="scb">SCB</li>
+                                    <option value="ocb">OCB</li>
+                                    <option value="mb">MBBank</li>
+                                    <option value="bvb">Bảo Việt Bank</li>
+                                    <option value="nab">Nam Á Bank</li>
+                                    <option value="acb">ACB</li>
+                                    <option value="stg">Sacombank</li>
+                                    <option value="dab">Đông Á Bank</li>
+                                </select>
+                            </div>
+                            <div class="frm">
+                                <label for="cardnolb" class="label">Số thẻ</label>
+                                <input type="number" class="blank" name="cardno" required>
+                            </div>
+                            <div class="frm">
+                                <label for="cardnamelb" class="label">Tên chủ thẻ</label>
+                                <input type="text" class="blank" name="cardname" required>
+                            </div>
+                            <div class="frm">
+                                <label for="amountlb" class="label">Số tiền</label>
+                                <input type="number" class="blank" name="amount" required>
+                            </div>
+                            <div class="frm">
+                                <label for="notelb" class="label">Nội dung ghi chú (tối đa 40 ký tự)</label>
+                                <input type="text" class="blank" name="note">
+                            </div>
+                            <div class="execute" onclick="cnfrm()"><input type="submit" value="Xác nhận"
+                                    class="execute"></div>
+                            <!-- <div class="execute" class="pay-btn"><button onclick="document.getElementById('popup').style.display='block'">Xác nhận</button></div> -->
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Notify báo thành công. Đặt trong "trnsfrPage" vì sẽ treo trên trnsfrPage-->
+                <!-- <div class="noti" id="popup">
+                    <div class="success">Giao dịch của bạn đã thành công<br/>Xin cảm ơn</div>
+                    <button type="button" onclick="document.getElementById('popup').style.display='none'" class="cancelbtn">OK</button>
+                </div> -->
+
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="ftlogo">DebutPay</div>
+            <div class="ftcontent">
+                <div class="ftname">DebutPay Services</div>
+                <ul class="ftdetail">
+                    <li><span>Địa chỉ: VTC Academy, đường Lê Đại Hành, quận 11, TP. HCM</span></li>
+                    <li><span>SĐT: 0258 345678</span></li>
+                    <li><span>Email: anhminh7799@gmail.com<br />&emsp;&emsp;&emsp;duoc1706@gmail.com</span></li>
+                </ul>
+                <div class="ftsign">Designed by: Minh Nguyen - Duoc Nguyen</div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+
+        // Function để chọn tab
+        function opentab(evnt, idname) {
+            var i, tabtrans, tabmain;
+            tabtrans = document.getElementsByClassName("tabtransfer");
+            for (i = 0; i < tabtrans.length; i++) {
+                tabtrans[i].style.display = "none";
+            }
+
+            tabmain = document.getElementsByClassName("maintab");
+            for (i = 0; i < tabmain.length; i++) {
+                tabmain[i].className = tabmain[i].className.replace(" selected", "");
+            }
+
+            document.getElementById(idname).style.display = "block";
+            evnt.currentTarget.className += " selected";
+        }
+
+        function checkform1() {
+            var accno = document.forms["forminternal"]["accno"].value;
+            var accname = document.forms["forminternal"]["accname"].value;
+            var amount = document.forms["forminternal"]["amount"].value;
+            var note = document.forms["forminternal"]["note"].value;
+            if (isNaN(accno) || accno == null || accno == "") {
+                alert("Số tài khoản không hợp lệ");
+                return false;
+            }
+            else if (isNaN(amount)) {
+                alert("Số tiền không hợp lệ");
+                return false;
+            }
+            else if (amount > balancenumber) {
+                alert("Số tiền lớn hơn số dư hiện có");
+                return false;
+            }
+            else {
+                var cnfrm = confirm("Bạn có đồng ý giao dịch không?");
+                if (cnfrm === true) {
+                    alert("Giao dịch thành công\nXin cảm ơn.");
+                }
+                return true;
+            }
+        }
+
+
+        function checkform2() {
+            var cardno = document.forms["formibft"]["cardno"].value;
+            var cardname = document.forms["formibft"]["cardname"].value;
+            var amount = document.forms["formibft"]["amount"].value;
+            var note = document.forms["formibft"]["note"].value;
+            if (cardno.length < 16) {
+                alert("Số thẻ ngân hàng không hợp lệ");
+                return false;
+            }
+            else if (isNaN(amount)) {
+                alert("Số tiền không hợp lệ");
+                return false;
+            }
+            else if (amount > balancenumber) {
+                alert("Số tiền lớn hơn số dư hiện có");
+                return false;
+            }
+            else {
+                var cnfrm = confirm("Bạn có đồng ý giao dịch không?");
+                if (cnfrm === true) {
+                    alert("Giao dịch thành công\nXin cảm ơn.");
+                }
+                return true;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
