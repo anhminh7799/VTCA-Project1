@@ -23,6 +23,15 @@ var customerData = [
         "accountID": "102587960375",
         "amountBalance": "0"
     }
+    ,
+    {
+        "id": "4",
+        "name": "Võ Thị Ngọc Trân",
+        "userName": "tran1707",
+        "email": "tran1707@gmail.com",
+        "accountID": "102006880795",
+        "amountBalance": "0"
+    }
 ]
 
 
